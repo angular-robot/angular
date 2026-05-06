@@ -388,7 +388,7 @@
       "source": {
         "filePath": "/src/aria/tree/tree-item.ts",
         "startLine": 44,
-        "endLine": 174
+        "endLine": 178
       }
     },
     {
@@ -557,6 +557,39 @@
           "jsdocTags": []
         },
         {
+          "name": "ngOnDestroy",
+          "signatures": [
+            {
+              "name": "ngOnDestroy",
+              "entryType": "function",
+              "description": "",
+              "generics": [],
+              "isNewType": false,
+              "jsdocTags": [],
+              "params": [],
+              "rawComment": "",
+              "returnType": "void"
+            }
+          ],
+          "implementation": {
+            "params": [],
+            "isNewType": false,
+            "returnType": "void",
+            "generics": [],
+            "name": "ngOnDestroy",
+            "description": "",
+            "entryType": "function",
+            "jsdocTags": [],
+            "rawComment": ""
+          },
+          "entryType": "function",
+          "description": "",
+          "jsdocTags": [],
+          "rawComment": "",
+          "memberType": "method",
+          "memberTags": []
+        },
+        {
           "name": "scrollActiveItemIntoView",
           "signatures": [
             {
@@ -623,11 +656,13 @@
         }
       ],
       "rawComment": "/**\n * A container that transforms nested lists into an accessible, ARIA-compliant tree structure.\n * It manages the overall state of the tree, including selection, expansion, and keyboard\n * navigation.\n *\n * ```html\n * <ul ngTree [(value)]=\"selectedItems\" [multi]=\"true\">\n *   <ng-template\n *     [ngTemplateOutlet]=\"treeNodes\"\n *     [ngTemplateOutletContext]=\"{nodes: treeData, parent: tree}\"\n *   />\n * </ul>\n *\n * <ng-template #treeNodes let-nodes=\"nodes\" let-parent=\"parent\">\n *   @for (node of nodes; track node.name) {\n *     <li ngTreeItem [parent]=\"parent\" [value]=\"node.name\" [label]=\"node.name\">\n *       {{ node.name }}\n *       @if (node.children) {\n *         <ul role=\"group\">\n *           <ng-template ngTreeItemGroup [ownedBy]=\"treeItem\" #group=\"ngTreeItemGroup\">\n *             <ng-template\n *               [ngTemplateOutlet]=\"treeNodes\"\n *               [ngTemplateOutletContext]=\"{nodes: node.children, parent: group}\"\n *             />\n *           </ng-template>\n *         </ul>\n *       }\n *     </li>\n *   }\n * </ng-template>\n * ```\n *\n * @developerPreview 21.0\n *\n * @see [Tree](guide/aria/tree)\n */",
-      "implements": [],
+      "implements": [
+        "OnDestroy"
+      ],
       "source": {
         "filePath": "/src/aria/tree/tree.ts",
-        "startLine": 70,
-        "endLine": 244
+        "startLine": 72,
+        "endLine": 242
       }
     }
   ],
@@ -862,6 +897,10 @@
     ],
     [
       "Tree.activeDescendant",
+      "@angular/aria/tree"
+    ],
+    [
+      "Tree.ngOnDestroy",
       "@angular/aria/tree"
     ],
     [
