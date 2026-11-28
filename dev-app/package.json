@@ -16,7 +16,7 @@
     "@angular/platform-server": "workspace:*",
     "@angular/router": "workspace:*",
     "@angular/ssr": "22.3.0-rc.0",
-    "beasties": "0.5.5",
+    "beasties": "0.5.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
